@@ -35,7 +35,7 @@ def predict():
         prediction = clf.predict(new_data)
 
         # Devolver el resultado de la predicción
-        result = 'Es probable que se informe del dengue' if prediction[0] == 1 else 'Es poco probable que se informe del dengue.'
+        result = 'Es probable que se reporten casos de dengue bajo estas condiciones climáticas.' if prediction[0] == 1 else 'Es poco probable que se reporten casos de dengue bajo estas condiciones climáticas.'
         return jsonify({'prediction': result})
     except Exception as e:
         return jsonify({'error': str(e)})
